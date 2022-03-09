@@ -52,7 +52,6 @@ export default class ContactForm extends Component {
           />
         </label>
         <button className={s.button} type="submit">
-          {' '}
           Add contact
         </button>
       </form>

@@ -1,10 +1,12 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import s from './ContactList.module.css';
 
 const ContactList = ({ visibleContacts, deleteContact }) => {
-  return (
+  const message = 'No contacts';
+  return visibleContacts.length > 0 ? (
     <ul className={s.list}>
-      {visibleContacts().map(({ name, number, id }) => (
+      {visibleContacts.map(({ name, number, id }) => (
         <li className={s.item} key={id}>
           <span className={s.contact}>
             {name}: {number}
@@ -15,7 +17,14 @@ const ContactList = ({ visibleContacts, deleteContact }) => {
         </li>
       ))}
     </ul>
+  ) : (
+    <span className={s.message}>{message}&#128531;</span>
   );
+};
+
+ContactList.propTypes = {
+  visibleContacts: PropTypes.arrayOf(PropTypes.shape).isRequired,
+  deleteContact: PropTypes.func.isRequired,
 };
 
 export default ContactList;

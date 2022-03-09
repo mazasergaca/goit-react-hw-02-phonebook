@@ -7,12 +7,12 @@
   justify-content: space-between;
 }
 .item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .contact {
-  background-color: rgb(31, 31, 31);
-  color: #fff;
+  background-color: #fff;
+  color: rgb(31, 31, 31);
   border-radius: 4px;
   padding: 3px 5px;
 }
@@ -34,4 +34,12 @@
 }
 .button:active {
   background-color: rgb(255, 152, 152);
+}
+
+.message {
+  margin-top: 15px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: rgb(31, 31, 31);
+  color: #fff;
 }

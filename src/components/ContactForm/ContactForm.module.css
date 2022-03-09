@@ -5,7 +5,7 @@
   padding: 15px;
   border: 1px solid black;
   border-radius: 4px;
-  background-color: rgb(31, 31, 31);
+  background: linear-gradient(3deg, #000000, #585858);
   color: rgb(255, 255, 255);
 }
 .label {
